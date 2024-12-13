@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- NavHostFragment -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/navHostFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/customBottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Custom Bottom Navigation -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/customBottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Home Tab -->
+        <LinearLayout
+            android:id="@+id/homeTab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/historyTab"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- Indicator Above Icon -->
+            <View
+                android:id="@+id/homeIndicator"
+                android:layout_width="24dp"
+                android:layout_height="2dp"
+                android:background="@color/blue"
+                android:visibility="visible" />
+
+            <!-- Add space between indicator and icon -->
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <ImageView
+                android:id="@+id/homeIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home"
+                android:contentDescription="@string/home"
+                app:tint="@color/blue" />
+        </LinearLayout>
+
+        <!-- History Tab -->
+        <LinearLayout
+            android:id="@+id/historyTab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            app:layout_constraintStart_toEndOf="@id/homeTab"
+            app:layout_constraintEnd_toStartOf="@id/cameraTab"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- Indicator Above Icon -->
+            <View
+                android:id="@+id/historyIndicator"
+                android:layout_width="24dp"
+                android:layout_height="2dp"
+                android:background="@color/blue"
+                android:visibility="gone" />
+
+            <!-- Add space between indicator and icon -->
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <ImageView
+                android:id="@+id/historyIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_clock"
+                android:contentDescription="@string/history"
+                app:tint="@color/gray" />
+        </LinearLayout>
+
+        <!-- Camera Tab (Centered with Circle) -->
+        <FrameLayout
+            android:id="@+id/cameraTab"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/historyTab"
+            app:layout_constraintEnd_toStartOf="@id/trackingTab">
+
+            <ImageView
+                android:id="@+id/cameraBackground"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/bg_circle"
+                android:contentDescription="@string/scan" />
+
+            <ImageView
+                android:id="@+id/cameraIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_camera"
+                android:contentDescription="@string/scan"
+                app:tint="@color/gray" />
+        </FrameLayout>
+
+        <!-- Tracking Tab -->
+        <LinearLayout
+            android:id="@+id/trackingTab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            app:layout_constraintStart_toEndOf="@id/cameraTab"
+            app:layout_constraintEnd_toStartOf="@id/moreTab"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- Indicator Above Icon -->
+            <View
+                android:id="@+id/trackingIndicator"
+                android:layout_width="24dp"
+                android:layout_height="2dp"
+                android:background="@color/blue"
+                android:visibility="gone" />
+
+            <!-- Add space between indicator and icon -->
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <ImageView
+                android:id="@+id/trackingIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_case_file"
+                android:contentDescription="@string/tracking"
+                app:tint="@color/gray" />
+        </LinearLayout>
+
+        <!-- More Options Tab -->
+        <LinearLayout
+            android:id="@+id/moreTab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            app:layout_constraintStart_toEndOf="@id/trackingTab"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- Indicator Above Icon -->
+            <View
+                android:id="@+id/moreIndicator"
+                android:layout_width="24dp"
+                android:layout_height="2dp"
+                android:background="@color/blue"
+                android:visibility="gone" />
+
+            <!-- Add space between indicator and icon -->
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <ImageView
+                android:id="@+id/moreIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_more"
+                android:contentDescription="@string/more"
+                app:tint="@color/gray" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

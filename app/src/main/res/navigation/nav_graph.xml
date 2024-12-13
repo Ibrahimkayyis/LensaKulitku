@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <!-- Home Fragment -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.capstone.lensakulitku.view.home.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_homeFragment_to_medicalProfileFragment"
+            app:destination="@id/medicalProfileFragment" />
+        <!-- Action ke DetailHistoryFragment -->
+        <action
+            android:id="@+id/action_homeFragment_to_detailHistoryFragment"
+            app:destination="@id/detailHistoryFragment">
+            <argument
+                android:name="dataItem"
+                app:argType="com.capstone.lensakulitku.view.history.DataItem" />
+        </action>
+    </fragment>
+
+    <!-- History Fragment -->
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.capstone.lensakulitku.view.history.HistoryFragment"
+        android:label="History">
+        <action
+            android:id="@+id/action_historyFragment_to_detailHistoryFragment"
+            app:destination="@id/detailHistoryFragment">
+            <argument
+                android:name="dataItem"
+                app:argType="com.capstone.lensakulitku.view.history.DataItem" />
+        </action>
+    </fragment>
+
+    <!-- Detail History Fragment -->
+    <fragment
+        android:id="@+id/detailHistoryFragment"
+        android:name="com.capstone.lensakulitku.view.history.DetailHistoryFragment"
+        android:label="Detail History"
+        tools:layout="@layout/fragment_detail_history">
+        <argument
+            android:name="dataItem"
+            app:argType="com.capstone.lensakulitku.view.history.DataItem" />
+    </fragment>
+
+    <!-- Scan Fragment -->
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.capstone.lensakulitku.view.scan.ScanFragment"
+        android:label="Scan">
+        <action
+            android:id="@+id/action_scanFragment_to_cameraXFragment"
+            app:destination="@id/cameraXFragment" />
+        <action
+            android:id="@+id/action_scanFragment_to_selectBaselineFragment"
+            app:destination="@id/selectBaselineFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/trackingFragment"
+        android:name="com.capstone.lensakulitku.view.tracking.TrackingFragment"
+        android:label="Tracking">
+        <action
+            android:id="@+id/action_trackingFragment_to_trackingResultFragment"
+            app:destination="@id/trackingResultFragment">
+            <argument
+                android:name="newImageUri"
+                app:argType="android.net.Uri" />
+            <argument
+                android:name="diseaseName"
+                app:argType="string" />
+            <argument
+                android:name="severityLevel"
+                app:argType="string" />
+            <argument
+                android:name="baselineImageUri"
+                app:argType="android.net.Uri"
+                app:nullable="true" />
+            <argument
+                android:name="baselineSeverity"
+                app:argType="string"
+                app:nullable="true" />
+            <argument
+                android:name="newSeverity"
+                app:argType="string"
+                app:nullable="true" />
+        </action>
+    </fragment>
+
+    <!-- More Options Fragment -->
+    <fragment
+        android:id="@+id/moreOptionsFragment"
+        android:name="com.capstone.lensakulitku.view.more.MoreOptionsFragment"
+        android:label="More Options"
+        tools:layout="@layout/fragment_more_options">
+        <action
+            android:id="@+id/action_moreOptionsFragment_to_medicalProfileFragment"
+            app:destination="@id/medicalProfileFragment" />
+    </fragment>
+
+
+    <!-- Medical Profile Fragment -->
+    <fragment
+        android:id="@+id/medicalProfileFragment"
+        android:name="com.capstone.lensakulitku.view.medicalprofile.MedicalProfileFragment"
+        android:label="Medical Profile">
+        <action
+            android:id="@+id/action_medicalProfileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <!-- CameraX Fragment -->
+    <fragment
+        android:id="@+id/cameraXFragment"
+        android:name="com.capstone.lensakulitku.view.camera.CameraXFragment"
+        android:label="CameraX"
+        tools:layout="@layout/fragment_camera_x">
+        <action
+            android:id="@+id/action_cameraXFragment_to_checkPhotoFragment"
+            app:destination="@id/checkPhotoFragment" />
+    </fragment>
+
+    <!-- Check Photo Fragment -->
+    <fragment
+        android:id="@+id/checkPhotoFragment"
+        android:name="com.capstone.lensakulitku.view.checkphoto.FragmentCheckPhoto"
+        android:label="Check Photo"
+        tools:layout="@layout/fragment_check_photo">
+        <action
+            android:id="@+id/action_checkPhotoFragment_to_describeSymptomsFragment"
+            app:destination="@id/describeSymptomsFragment" />
+        <action
+            android:id="@+id/action_checkPhotoFragment_to_cameraXFragment"
+            app:destination="@id/cameraXFragment" />
+    </fragment>
+
+    <!--    Describe Symptoms Fragment-->
+    <fragment
+        android:id="@+id/describeSymptomsFragment"
+        android:name="com.capstone.lensakulitku.view.describe.DescribeSymptomsFragment"
+        android:label="Describe Symptoms"
+        tools:layout="@layout/fragment_describe_symptoms">
+        <action
+            android:id="@+id/action_describeSymptomsFragment_to_analysisLoadingFragment"
+            app:destination="@id/analysisLoadingFragment" />
+    </fragment>
+
+    <!--AnalysisLoadingFragment-->
+    <fragment
+        android:id="@+id/analysisLoadingFragment"
+        android:name="com.capstone.lensakulitku.view.loading.AnalysisLoadingFragment"
+        android:label="Analysis Loading">
+        <action
+            android:id="@+id/action_analysisLoadingFragment_to_resultAnalysisFragment"
+            app:destination="@id/resultAnalysisFragment" />
+        <action
+            android:id="@+id/action_analysisLoadingFragment_to_cameraXFragment"
+            app:destination="@id/cameraXFragment" />
+    </fragment>
+
+    <!--    Result Analysis Fragment-->
+    <fragment
+        android:id="@+id/resultAnalysisFragment"
+        android:name="com.capstone.lensakulitku.view.result.ResultAnalysisFragment"
+        android:label="Result Analysis">
+        <action
+            android:id="@+id/action_resultAnalysisFragment_to_doctorListFragment"
+            app:destination="@id/doctorListFragment">
+            <argument
+                android:name="diseaseName"
+                app:argType="string" />
+            <argument
+                android:name="severity"
+                app:argType="string" />
+            <argument
+                android:name="imageUri"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_resultAnalysisFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <!--Doctor List Fragment-->
+    <fragment
+        android:id="@+id/doctorListFragment"
+        android:name="com.capstone.lensakulitku.view.doctor.DoctorListFragment"
+        android:label="Doctor List">
+        <argument
+            android:name="diseaseName"
+            app:argType="string" />
+        <argument
+            android:name="severity"
+            app:argType="string" />
+        <argument
+            android:name="imageUri"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_doctorListFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+
+    <!--Chat Fragment -->
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.capstone.lensakulitku.view.chat.ChatFragment"
+        android:label="Chat">
+        <argument
+            android:name="doctorId"
+            app:argType="integer" />
+        <argument
+            android:name="doctorName"
+            app:argType="string" />
+        <argument
+            android:name="doctorSpecialization"
+            app:argType="string" />
+        <argument
+            android:name="diseaseName"
+            app:argType="string" />
+        <argument
+            android:name="severity"
+            app:argType="string" />
+        <argument
+            android:name="imageUri"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_chatFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+
+
+    <!--    Select Baseline Fragment-->
+    <fragment
+        android:id="@+id/selectBaselineFragment"
+        android:name="com.capstone.lensakulitku.view.tracking.SelectBaselineFragment"
+        android:label="Select Baseline"
+        tools:layout="@layout/fragment_select_baseline">
+        <action
+            android:id="@+id/action_selectBaselineFragment_to_trackingCameraXFragment"
+            app:destination="@id/trackingCameraXFragment">
+            <argument
+                android:name="dataItem"
+                app:argType="com.capstone.lensakulitku.view.history.DataItem" />
+        </action>
+    </fragment>
+
+    <!--    Tracking Camera X Fragment-->
+    <fragment
+        android:id="@+id/trackingCameraXFragment"
+        android:name="com.capstone.lensakulitku.view.tracking.TrackingCameraXFragment"
+        android:label="Tracking CameraX"
+        tools:layout="@layout/fragment_tracking_camera_x">
+        <action
+            android:id="@+id/action_trackingCameraXFragment_to_trackingCheckPhotoFragment"
+            app:destination="@id/trackingCheckPhotoFragment">
+            <argument
+                android:name="imageUri"
+                app:argType="android.net.Uri" />
+            <argument
+                android:name="baselineImageUri"
+                app:argType="android.net.Uri"
+                app:nullable="true" />
+        </action>
+    </fragment>
+
+    <!-- Tracking Check Photo Fragment -->
+    <fragment
+        android:id="@+id/trackingCheckPhotoFragment"
+        android:name="com.capstone.lensakulitku.view.tracking.TrackingCheckPhotoFragment"
+        android:label="Tracking Check Photo"
+        tools:layout="@layout/fragment_tracking_check_photo">
+        <action
+            android:id="@+id/action_trackingCheckPhotoFragment_to_trackingDescribeSymptomsFragment"
+            app:destination="@id/trackingDescribeSymptomsFragment">
+            <argument
+                android:name="imageUri"
+                app:argType="android.net.Uri" />
+            <argument
+                android:name="baselineImageUri"
+                app:argType="android.net.Uri"
+                app:nullable="true" />
+        </action>
+
+        <action
+            android:id="@+id/action_trackingCheckPhotoFragment_to_trackingCameraXFragment"
+            app:destination="@id/trackingCameraXFragment" />
+    </fragment>
+
+    <!-- Tracking Describe Symptoms Fragment -->
+    <fragment
+        android:id="@+id/trackingDescribeSymptomsFragment"
+        android:name="com.capstone.lensakulitku.view.tracking.TrackingDescribeSymptomsFragment"
+        android:label="Tracking Describe Symptoms"
+        tools:layout="@layout/fragment_tracking_describe_symptoms">
+        <action
+            android:id="@+id/action_trackingDescribeSymptomsFragment_to_trackingAnalysisLoadingFragment"
+            app:destination="@id/trackingAnalysisLoadingFragment">
+            <argument
+                android:name="imageFile"
+                app:argType="java.io.File" />
+            <argument
+                android:name="baselineImageFile"
+                app:argType="java.io.File" />
+            <argument
+                android:name="baselineImageUri"
+                app:argType="android.net.Uri"
+                app:nullable="true" />
+        </action>
+
+    </fragment>
+
+    <!-- Tracking Analysis Loading Fragment -->
+    <fragment
+        android:id="@+id/trackingAnalysisLoadingFragment"
+        android:name="com.capstone.lensakulitku.view.tracking.TrackingAnalysisLoadingFragment"
+        android:label="Tracking Analysis Loading"
+        tools:layout="@layout/fragment_tracking_analysis_loading">
+        <action
+            android:id="@+id/action_trackingAnalysisLoadingFragment_to_trackingResultFragment"
+            app:destination="@id/trackingResultFragment">
+            <argument
+                android:name="result"
+                app:argType="com.capstone.lensakulitku.view.loading.PredictionResponse" />
+            <argument
+                android:name="currentImageFile"
+                app:argType="java.io.File" />
+            <argument
+                android:name="baselineImageUri"
+                app:argType="android.net.Uri" />
+            <argument
+                android:name="newImageUri"
+                app:argType="android.net.Uri" />
+            <argument
+                android:name="diseaseName"
+                app:argType="string" />
+        </action>
+
+        <action
+            android:id="@+id/action_trackingAnalysisLoadingFragment_to_trackingCameraXFragment"
+            app:destination="@id/trackingCameraXFragment" />
+    </fragment>
+
+    <!-- Tracking Result Fragment -->
+    <fragment
+        android:id="@+id/trackingResultFragment"
+        android:name="com.capstone.lensakulitku.view.tracking.TrackingResultFragment"
+        android:label="Tracking Result"
+        tools:layout="@layout/fragment_tracking_result">
+        <action
+            android:id="@+id/action_trackingResultFragment_to_selectBaselineFragment"
+            app:destination="@id/selectBaselineFragment" />
+        <action
+            android:id="@+id/action_trackingResultFragment_to_trackingFragment"
+            app:destination="@id/trackingFragment">
+            <argument
+                android:name="newImageUri"
+                app:argType="android.net.Uri" />
+            <argument
+                android:name="diseaseName"
+                app:argType="string" />
+            <argument
+                android:name="severityLevel"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+</navigation>

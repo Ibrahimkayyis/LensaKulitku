@@ -1,0 +1,212 @@
+<resources>
+    <string name="app_name">LensaKulitku</string>
+    <string name="back">Back</string>
+    <string name="skip">Skip</string>
+    <string name="illustration">Illustration</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="create_account">Create Your Account</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="full_name">Full Name</string>
+    <string name="password">Password</string>
+    <string name="signup_with_google">Sign up with google</string>
+
+    <!-- Onboarding Texts -->
+    <string name="onboarding_title_1">Welcome</string>
+    <string name="onboarding_desc_1">Analyze your skin condition with LensaKulitku and get professional insights effortlessly.</string>
+    <string name="onboarding_title_2">Accurate Results</string>
+    <string name="onboarding_desc_2">Receive detailed analysis and recommendations backed by advanced technology for optimal skincare.</string>
+    <string name="onboarding_title_3">Track Your Progress</string>
+    <string name="onboarding_desc_3">Monitor changes in your skin condition over time and stay informed about your skin health.</string>
+    <string name="get_started">Get Started</string>
+    <string name="next">Next</string>
+
+
+    <string name="confirm_password">Confirm password</string>
+    <string name="notification">notification</string>
+    <string name="profile_icon">profile icon</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="history">History</string>
+    <string name="scan">Scan</string>
+    <string name="tracking">Tracking</string>
+    <string name="more">More</string>
+
+    <string name="popup_message">Complete your medical profile before analyzing your skin condition so we can better assist you.</string>
+    <string name="step_indicator">Step %1$d of %2$d</string>
+    <string name="close">Close</string>
+    <string name="popup_icon">Popup Icon</string>
+    <string name="scan_option_image">gambar opsi scan</string>
+    <string name="back_button">back button</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="no_history_found">No History Found</string>
+
+    <!-- Strings for DetailHistoryFragment & layout -->
+    <string name="unknown_disease">Unknown Disease</string>
+    <string name="severity">Severity: %1$s</string>
+    <string name="no_description">No description available.</string>
+    <string name="no_suggestions">No suggestions available.</string>
+    <string name="no_date">No date</string>
+    <string name="no_data">No data available</string>
+    <string name="severe">Severe</string>
+    <string name="moderate">Moderate</string>
+    <string name="mild">Mild</string>
+    <string name="unknown">Unknown</string>
+    <string name="description_title">Description</string>
+    <string name="recommendation_title">Recommendation</string>
+
+    <!--Strings for Home Fragment & layout-->
+    <string name="unknown_viewmodel_class">Unknown ViewModel class</string>
+    <string name="shared_preferences_key">LensaKulitkuPrefs</string>
+    <string name="medical_profile_completed_key">MEDICAL_PROFILE_COMPLETED</string>
+    <string name="completed_percentage">100%</string>
+    <string name="not_completed_percentage">0%</string>
+    <string name="completed_status">Completed</string>
+    <string name="not_completed_status">Not Completed</string>
+    <string name="analysis_number">Analysis #%1$d</string>
+    <string name="level_of_severity">Level of Severity : %1$s</string>
+    <string name="tour_medical_profile_title">My Medical Profile</string>
+    <string name="tour_medical_profile_description">Complete your medical profile before analyzing your skin condition so we can better assist you.</string>
+    <string name="tour_scan_camera_title">Scan Camera</string>
+    <string name="tour_scan_camera_description">You can analyze and track your skin condition with scan camera.</string>
+    <string name="tour_case_files_title">Case Files</string>
+    <string name="tour_case_files_description">All your tracking history will be stored in case files.</string>
+    <string name="tour_history_title">History</string>
+    <string name="tour_history_description">All information related to your skin condition is stored in history.</string>
+    <string name="medical_profile_dialog_title">Complete Your Medical Profile</string>
+    <string name="medical_profile_dialog_message">Before you can proceed, please fill out your medical profile to help us assist you better.</string>
+    <string name="continue_button">Continue</string>
+    <string name="search_hint">Search Anything</string>
+    <string name="medical_profile_title">My Medical Profile</string>
+    <string name="progress_percentage_default">0%</string>
+    <string name="not_completed">Not Completed</string>
+    <string name="recent_analysis_title">Recent Analysis</string>
+    <string name="analysis_title">Analysis #001</string>
+    <string name="disease_name_placeholder">Disease name</string>
+    <string name="createdAt_placeholder">14 November 2024</string>
+
+    <!--  Strings for Analysis Loading Fragment & Layout  -->
+    <string name="error_title">Error</string>
+    <string name="retry">Retry</string>
+    <string name="retake_photo">Retake Photo</string>
+    <string name="loading_message">Please wait while we analyse your skin condition, this may take a few seconds.</string>
+    <string name="analysing_status">Analysing…</string>
+
+    <!--  Strings for Login Activity & Layout  -->
+    <string name="signup_text">Don\'t Have An Account? Sign Up</string>
+    <string name="signup_label">Sign Up</string>
+    <string name="error_email_empty">Email cannot be empty</string>
+    <string name="error_invalid_email">Invalid email address</string>
+    <string name="error_password_empty">Password cannot be empty</string>
+    <string name="error_password_too_short">Password must be at least 6 characters</string>
+    <string name="login_failed">Login failed. Token or User ID is null.</string>
+    <string name="ok">OK</string>
+
+    <!--  Strings for Medical Profile Fragment & Layout  -->
+    <string name="pref_file_name">LensaKulitkuPrefs</string>
+    <string name="pref_user_id_key">USER_ID</string>
+    <string name="pref_profile_completed">MEDICAL_PROFILE_COMPLETED</string>
+    <string name="error_user_id_not_found">User ID not found. Please login again.</string>
+    <string name="error_fill_required_fields">Please fill in all required fields correctly.</string>
+    <string name="default_no">no</string>
+    <string name="error_update_profile">Failed to update profile.</string>
+    <string name="dialog_success_title">Thank You!</string>
+    <string name="dialog_success_message">Your medical profile has been updated successfully. You can now start the skin disease analysis process using the scan feature by clicking the camera icon in the navigation.</string>
+    <string name="continue_label">Continue</string>
+    <string name="date_format">%02d-%02d-%04d</string>
+    <string name="input_date_format">dd-MM-yyyy</string>
+    <string name="output_date_format">yyyy-MM-dd</string>
+    <string name="gender_male">male</string>
+    <string name="gender_female">female</string>
+    <string name="my_medical_profile">My Medical Profile</string>
+    <string name="gender">Gender</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="postcode">Postcode</string>
+    <string name="skin_type">Skin Type</string>
+    <string name="medical_history">Medical History of Skin Diseases</string>
+    <string name="allergies">Allergies</string>
+    <string name="current_medication">Current Medication</string>
+    <string name="save">Save</string>
+
+    <!--  Strings for ResultAnalysis Fragment & Layout  -->
+    <string name="severity_mild">Mild</string>
+    <string name="severity_moderate">Moderate</string>
+    <string name="severity_severe">Severe</string>
+    <string name="confidence_score">Confidence Score:</string>
+    <string name="disease_confidence">Disease: %1$d%%</string>
+    <string name="analysis_failed">Analysis failed.</string>
+    <string name="try_again">Please try again.</string>
+    <string name="analysis_file_name">analysis_%1$d.jpg</string>
+
+
+    <!--  Strings for Scan Fragment & Layout  -->
+    <!-- Options -->
+    <string name="analysis_option_title">Analysis</string>
+    <string name="analysis_option_description">Take Photos of the affected area, describe your symptoms and receive immediate results and recommendations</string>
+    <string name="tracker_option_title">Tracker</string>
+    <string name="tracker_option_description">Keep track of your skin and store photos in your case file</string>
+    <string name="scan_title">Scan</string>
+    <string name="scan_subtitle">Please choose one of the following options</string>
+
+    <!-- App Tour -->
+    <string name="app_tour_analysis_title">Start Your First Analysis</string>
+    <string name="app_tour_analysis_description">Tap the \'Start\' button to begin your first skin analysis and explore the features.</string>
+    <string name="app_tour_completed">App Tour Completed</string>
+    <string name="app_tour_skipped">App Tour Skipped</string>
+    <string name="app_tour_start_button_not_found">Start button not found for App Tour.</string>
+    <string name="is_first_time_scan_fragment_key">is_first_time_scan_fragment_key</string>
+
+
+    <!--  Strings for SignUp Activity & Layout  -->
+    <string name="already_have_account">Already Have An Account? Login</string>
+    <string name="login_label">Login</string>
+    <string name="error_empty_name">Full name cannot be empty</string>
+    <string name="error_empty_email">Email cannot be empty</string>
+    <string name="error_empty_password">Password cannot be empty</string>
+    <string name="error_short_password">Password must be at least 6 characters</string>
+    <string name="error_empty_confirm_password">Confirm Password cannot be empty</string>
+    <string name="error_password_mismatch">Passwords do not match</string>
+    <string name="registration_completed">Registration completed</string>
+    <string name="signup_success_title">Sign-Up Success</string>
+    <string name="signup_success_message">Account created successfully for %1$s.</string>
+
+    <!--  Strings for Describe Symptoms Fragment & Layout  -->
+    <string name="error_image_not_found">Image not found!</string>
+    <string name="error_missing_image">Image is missing!</string>
+    <string name="error_processing_image">Failed to process image: %1$s</string>
+    <string name="log_checkbox_itching">Itching: %1$b</string>
+    <string name="log_checkbox_bleeding">Bleeding: %1$b</string>
+    <string-array name="symptom_durations">
+        <item>Days to Week</item>
+        <item>Weeks to Month</item>
+        <item>Month to Year</item>
+    </string-array>
+    <string name="back_button_description">Go back</string>
+    <string name="title_describe_symptoms">Describe Symptoms</string>
+    <string name="progress_step_1_completed">Step 1 completed</string>
+    <string name="progress_step_2_completed">Step 2 completed</string>
+    <string name="progress_step_3_completed">Step 3 completed</string>
+    <string name="progress_step_4_upcoming">Step 4 upcoming</string>
+    <string name="instruction_describe_symptoms">Please Describe Your Symptoms</string>
+    <string name="question_symptom_duration">How Long Have You Had The Skin Condition?</string>
+    <string name="question_symptom_selection">Select Any Symptoms Related To Your Skin</string>
+    <string name="symptom_itching">Itching</string>
+    <string name="symptom_bleeding">Bleeding</string>
+    <string name="symptom_changing">Changing</string>
+    <string name="symptom_growing">Growing</string>
+    <string name="symptom_hurt">Hurt</string>
+    <string name="symptom_hardened">Hardened</string>
+    <string name="button_continue">Continue</string>
+
+
+    <string name="no_tracking_results_found">No tracking results found</string>
+    <string name="list_doctor_title">List of Doctors</string>
+
+    <!-- SharedPreferences Keys -->
+    <string name="is_first_login_key">is_first_login</string>
+
+</resources>

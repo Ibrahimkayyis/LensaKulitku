@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/popupTourLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <!-- Triangle Arrow -->
+    <ImageView
+        android:id="@+id/ivTriangle"
+        android:layout_width="24dp"
+        android:layout_height="12dp"
+        android:layout_gravity="center_horizontal"
+        android:rotation="0"
+        android:src="@drawable/bg_triangle" />
+
+    <!-- Pop-Up Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/popupCardView"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-6dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Close Icon -->
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end"
+                android:contentDescription="@string/close"
+                app:srcCompat="@drawable/ic_close"
+                app:tint="@color/gray" />
+
+            <!-- Pop-up Icon -->
+            <ImageView
+                android:id="@+id/ivPopupIcon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/popup_icon"
+                app:srcCompat="@drawable/ic_info"
+                app:tint="@color/blue" />
+
+            <!-- Text Message -->
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunitosansregular"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/popup_message"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="16sp" />
+
+            <!-- Step Indicator -->
+            <TextView
+                android:id="@+id/tvStepIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/nunitosansregular"
+                android:text="@string/step_indicator"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+
+            <!-- Next Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunitosansbold"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:backgroundTint="@color/blue"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/ic_arrow_right"
+                app:iconGravity="textEnd"
+                app:iconPadding="8dp"
+                app:iconTint="@color/white" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.LensaKulitku" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Warna Utama -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/colorTextOnPrimary</item>
+
+        <!-- Warna Sekunder -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/colorPrimaryText</item>
+
+        <!-- Warna Background -->
+        <item name="android:windowBackground">@color/colorSecondary</item>
+
+        <!-- Warna Teks -->
+        <item name="android:textColorPrimary">@color/colorPrimaryText</item>
+        <item name="android:textColorSecondary">@color/colorSecondaryText</item>
+
+        <!-- Customize your light theme here. -->
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.LensaKulitku" parent="Base.Theme.LensaKulitku" />
+</resources>

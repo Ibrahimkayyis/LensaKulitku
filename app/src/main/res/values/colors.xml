@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Color -->
+    <color name="colorPrimary">#1e6ec9</color>
+    <!-- Secondary Color -->
+    <color name="colorSecondary">#FFFFFF</color>
+    <!-- Primary Text Color -->
+    <color name="colorPrimaryText">#767676</color>
+    <!-- Secondary Text Color -->
+    <color name="colorSecondaryText">#a3a3a3</color>
+    <!-- Text Color on Primary Background -->
+    <color name="colorTextOnPrimary">#F7F7F7</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#1e6ec9</color>
+    <color name="gray">#a3a3a3</color>
+    <color name="green">#00C853</color>
+    <color name="yellow">#FFC107</color>
+    <color name="red">#D50000</color>
+
+
+</resources>
