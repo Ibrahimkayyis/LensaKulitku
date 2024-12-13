@@ -11,8 +11,9 @@ LensaKulitku is an innovative application designed to tackle the pressing issue 
 2. [Screenshots and Demo](#screenshots-and-demo)
 3. [Features](#features)
 4. [Technologies Used](#technologies-used)
-5. [Contact](#contact)
-6. [Acknowledgement](#acknowledgement)
+5. [Website](#website)
+6. [Contact](#contact)
+7. [Acknowledgement](#acknowledgement)
 
 ---
 
@@ -85,6 +86,13 @@ Mobile Device With Android OS
 - [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android.
 - [Room](https://developer.android.com/training/data-storage/room) - Jetpack library for data persistence with SQLite.
 - [KSP (Kotlin Symbol Processing)](https://github.com/google/ksp) - Tool for annotation processing in Kotlin.
+
+## Website
+
+Visit our official website for more information about **LensaKulitku**:  
+[https://lensakulitku.netlify.app/](https://lensakulitku.netlify.app/)
+
+Explore the features, learn how the app works, and stay updated with the latest news about **LensaKulitku**!
 
 ## Contact
 
